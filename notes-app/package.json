@@ -1,0 +1,24 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "npx nodemon app.js",
+    "test:add": "node app.js add --title='test note' --body='test note body'",
+    "test:remove": "node app.js remove --title='test note'",
+    "test:list": "node app.js list",
+    "test:read": "node app.js read --title='test note'",
+    "test:read:404": "node app.js read --title='this note does not exist'",
+    "test": "npm run test:add ; npm run test:list ; npm run test:read ;  npm run test:read:404 ; npm run test:remove"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.5"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "yargs": "^12.0.2"
+  }
+}
